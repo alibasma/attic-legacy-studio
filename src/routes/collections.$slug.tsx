@@ -10,11 +10,11 @@ export const Route = createFileRoute("/collections/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Unavailable — ATTICLEGACY" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Indisponible — ATTICLEGACY" }, { name: "robots", content: "noindex" }],
       };
     }
     const title = `${loaderData.collection.season} — ATTICLEGACY`;
-    const description = `${loaderData.collection.name}: images, product details and the drop video of this ATTICLEGACY chapter.`;
+    const description = `${loaderData.collection.name} : images, détails produit et vidéo du drop de ce chapitre ATTICLEGACY.`;
     return {
       meta: [
         { title },
@@ -35,13 +35,13 @@ function CollectionPage() {
       <div className="relative h-[70vh] w-full overflow-hidden">
         <img
           src={collection.cover}
-          alt={`${collection.name} cover`}
+          alt={`Cover ${collection.name}`}
           className="h-full w-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-background/60" />
         <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-12">
           <Link to="/" className="label text-muted-foreground hover:text-primary">
-            ← Back
+            ← Retour
           </Link>
           <div>
             <p className="label text-primary">{collection.season}</p>
@@ -55,7 +55,7 @@ function CollectionPage() {
       <section className="grid gap-10 border-b border-border px-6 py-16 md:grid-cols-2 md:px-12">
         <p className="max-w-xl text-lg text-muted-foreground md:text-xl">{collection.story}</p>
         <div>
-          <p className="label text-primary">Product details</p>
+          <p className="label text-primary">Détails produit</p>
           <ul className="mt-4 space-y-2 text-base">
             {collection.details.map((d) => (
               <li key={d} className="border-b border-border pb-2">
@@ -69,7 +69,7 @@ function CollectionPage() {
             rel="noreferrer"
             className="label mt-8 inline-block bg-primary px-6 py-4 text-primary-foreground transition-opacity hover:opacity-80"
           >
-            Watch the drop video →
+            Voir la vidéo du drop →
           </a>
         </div>
       </section>
