@@ -1,23 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef, useState } from "react";
-import heroImg from "@/assets/hero.jpg";
-import processImg from "@/assets/process.jpg";
-import { collections, storySlides } from "@/data/collections";
+import { collections, storySlides, heroImage, processImage } from "@/data/collections";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ATTICLEGACY — From Nothing, Create The Extraordinary" },
+      { title: "ATTICLEGACY — Partir de rien, créer l'extraordinaire" },
       {
         name: "description",
         content:
-          "A streetwear brand built from zero between Dakar, Cologne, Paris and Lyon. One person, every step.",
+          "Une marque streetwear construite de zéro, entre Dakar, Cologne, Paris et Lyon. Une seule personne, chaque étape.",
       },
-      { property: "og:title", content: "ATTICLEGACY — From Nothing, Create The Extraordinary" },
+      { property: "og:title", content: "ATTICLEGACY — Partir de rien, créer l'extraordinaire" },
       {
         property: "og:description",
         content:
-          "A streetwear brand built from zero between Dakar, Cologne, Paris and Lyon. One person, every step.",
+          "Une marque streetwear construite de zéro, entre Dakar, Cologne, Paris et Lyon. Une seule personne, chaque étape.",
       },
     ],
   }),
@@ -40,8 +38,8 @@ function Hero() {
   return (
     <section className="relative flex h-screen flex-col justify-between overflow-hidden">
       <img
-        src={heroImg}
-        alt="ATTICLEGACY campaign"
+        src={heroImage}
+        alt="Campagne ATTICLEGACY"
         width={1920}
         height={1280}
         className="absolute inset-0 h-full w-full object-cover"
@@ -50,19 +48,19 @@ function Hero() {
 
       <header className="relative flex items-center justify-between p-6 md:p-10">
         <span className="label">ATTICLEGACY</span>
-        <span className="label text-muted-foreground">EST. DAKAR</span>
+        <span className="label text-muted-foreground">DEPUIS DAKAR</span>
       </header>
 
       <div className="relative px-6 pb-16 md:px-10 md:pb-20">
         <h1 className="display text-[19vw] leading-[0.78] md:text-[13vw]">ATTICLEGACY</h1>
         <p className="display mt-4 max-w-3xl text-2xl text-primary md:text-4xl">
-          From nothing, create the extraordinary.
+          Partir de rien, créer l'extraordinaire.
         </p>
         <p className="mt-6 max-w-md text-sm text-muted-foreground md:text-base">
-          A streetwear brand built from zero, between Dakar, Cologne, Paris and Lyon.
+          Une marque streetwear construite de zéro, entre Dakar, Cologne, Paris et Lyon.
         </p>
-        <a href="#story" className="label mt-10 inline-block border-b border-primary pb-1">
-          Discover the story ↓
+        <a href="#histoire" className="label mt-10 inline-block border-b border-primary pb-1">
+          Découvrir l'histoire ↓
         </a>
       </div>
     </section>
@@ -84,11 +82,11 @@ function StoryCarousel() {
   };
 
   return (
-    <section id="story" className="border-t border-border py-20 md:py-28">
+    <section id="histoire" className="border-t border-border py-20 md:py-28">
       <div className="px-6 md:px-10">
-        <h2 className="display text-[13vw] leading-[0.8] md:text-[7vw]">Before Atticlegacy</h2>
+        <h2 className="display text-[13vw] leading-[0.8] md:text-[7vw]">Avant Atticlegacy</h2>
         <p className="mt-4 text-sm text-muted-foreground md:text-base">
-          Before discovering the brand, discover where it comes from.
+          Avant de découvrir la marque, découvre d'où elle vient.
         </p>
       </div>
 
@@ -115,14 +113,14 @@ function StoryCarousel() {
         </span>
         <button
           onClick={() => go(-1)}
-          aria-label="Previous"
+          aria-label="Précédent"
           className="label border border-border px-4 py-3 hover:border-primary hover:text-primary"
         >
           ←
         </button>
         <button
           onClick={() => go(1)}
-          aria-label="Next"
+          aria-label="Suivant"
           className="label border border-border px-4 py-3 hover:border-primary hover:text-primary"
         >
           →
@@ -132,7 +130,7 @@ function StoryCarousel() {
   );
 }
 
-const steps = ["DESIGN", "PRODUCT", "SHOOT", "EDIT", "LAUNCH"];
+const steps = ["DESIGN", "PRODUIT", "SHOOT", "MONTAGE", "LANCEMENT"];
 const cities = ["DAKAR", "COLOGNE", "PARIS", "LYON"];
 
 function FromIdeaToBrand() {
@@ -140,18 +138,20 @@ function FromIdeaToBrand() {
     <section className="border-t border-border">
       <div className="grid gap-12 px-6 py-20 md:grid-cols-2 md:px-10 md:py-28">
         <div>
-          <h2 className="display text-[12vw] leading-[0.8] md:text-[6vw]">From an idea to a brand</h2>
+          <h2 className="display text-[12vw] leading-[0.8] md:text-[6vw]">D'une idée à une marque</h2>
           <p className="mt-8 max-w-xl text-base text-muted-foreground md:text-lg">
-            ATTICLEGACY was born from a simple idea: turning what I didn't have into something
-            people could wear. No investors, no team, no shortcut — only an obsession with images,
-            garments and the story behind them.
+            ATTICLEGACY est née d'une idée simple : transformer ce que je n'avais pas en quelque
+            chose que les gens peuvent porter. Pas d'investisseurs, pas d'équipe, pas de raccourci —
+            seulement une obsession pour les images, les vêtements et l'histoire derrière.
           </p>
 
-          <p className="display mt-12 text-3xl text-primary md:text-5xl">One person. Every step.</p>
+          <p className="display mt-12 text-3xl text-primary md:text-5xl">
+            Une seule personne. Chaque étape.
+          </p>
           <p className="mt-4 max-w-xl text-base text-muted-foreground md:text-lg">
-            From the first idea to the final image, I currently build every part of ATTICLEGACY
-            myself: product development, sourcing, creative direction, photoshoots, content, video
-            editing, website and marketing.
+            De la première idée à l'image finale, je construis aujourd'hui chaque partie
+            d'ATTICLEGACY moi-même : développement produit, sourcing, direction créative, shootings,
+            contenu, montage vidéo, site web et marketing.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2">
@@ -173,8 +173,8 @@ function FromIdeaToBrand() {
         </div>
 
         <img
-          src={processImg}
-          alt="Building ATTICLEGACY alone at night"
+          src={processImage}
+          alt="Construire ATTICLEGACY seul, la nuit"
           loading="lazy"
           width={1280}
           height={1600}
@@ -189,7 +189,7 @@ function Collections() {
   return (
     <section className="border-t border-border py-20 md:py-28">
       <h2 className="display px-6 text-[13vw] leading-[0.8] md:px-10 md:text-[7vw]">
-        The last 3 chapters
+        Les 3 derniers chapitres
       </h2>
 
       <div className="mt-12 grid gap-1 md:grid-cols-3">
@@ -211,7 +211,7 @@ function Collections() {
             <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-background via-transparent to-transparent p-6">
               <span className="label text-primary">{c.index}</span>
               <span className="display mt-2 text-3xl md:text-4xl">{c.name}</span>
-              <span className="label mt-3 text-muted-foreground">Open the chapter →</span>
+              <span className="label mt-3 text-muted-foreground">Ouvrir le chapitre →</span>
             </div>
           </Link>
         ))}
@@ -224,11 +224,11 @@ function Slogan() {
   return (
     <footer className="border-t border-border px-6 py-24 md:px-10 md:py-32">
       <p className="display text-[11vw] leading-[0.85] md:text-[6.5vw]">
-        Your starting point
+        Ton point de départ
         <br />
-        should never define
+        ne définira jamais
         <br />
-        <span className="text-primary">your future.</span>
+        <span className="text-primary">ton futur.</span>
       </p>
       <p className="label mt-12 text-muted-foreground">ATTICLEGACY</p>
     </footer>
