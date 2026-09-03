@@ -97,13 +97,29 @@ export const collections: Collection[] = [
 ];
 
 /* ---- CARROUSEL "AVANT ATTICLEGACY" ----
-   Ajoute, enlève ou réordonne les slides librement.                          */
+   Ce sont tes 10 slides (le texte est déjà sur les images).
+   Pour en changer une : remplace le fichier importé en haut de la liste.     */
+import slide01 from "@/assets/story-1.webp.asset.json";
+import slide02 from "@/assets/story-2.jpg.asset.json";
+import slide03 from "@/assets/story-3.webp.asset.json";
+import slide04 from "@/assets/story-4.webp.asset.json";
+import slide05 from "@/assets/story-5.webp.asset.json";
+import slide06 from "@/assets/story-6.webp.asset.json";
+import slide07 from "@/assets/story-7.jpg.asset.json";
+import slide08 from "@/assets/story-8.webp.asset.json";
+import slide09 from "@/assets/story-9.jpg.asset.json";
+import slide10 from "@/assets/story-10.jpg.asset.json";
+
 export const storySlides = [
-  { src: story01, caption: "DAKAR — là où tout commence." },
-  { src: story02, caption: "COLOGNE — une nouvelle langue, une nouvelle rue." },
-  { src: story03, caption: "Les premiers croquis." },
-  { src: atelier, caption: "Des nuits à tout apprendre seul." },
-  { src: cover01, caption: "PARIS — le premier drop." },
-  { src: cover02, caption: "LYON — construire la suite." },
-  { src: cover03, caption: "Aujourd'hui — ATTICLEGACY." },
+  { src: slide01.url, caption: "01 — Ingénieur, entrepreneur, styliste, vidéaste." },
+  { src: slide02.url, caption: "02 — Après le bac : partir de zéro." },
+  { src: slide03.url, caption: "03 — École d'ingénieur à Dakar, la tête ailleurs." },
+  { src: slide04.url, caption: "04 — 200 € et un grenier." },
+  { src: slide05.url, caption: "05 — Les 40 premiers t-shirts." },
+  { src: slide06.url, caption: "06 — 1 000 € perdus. J'arrête." },
+  { src: slide07.url, caption: "07 — Dakar → Nice → Cologne." },
+  { src: slide08.url, caption: "08 — Cologne : un an de maladie." },
+  { src: slide09.url, caption: "09 — 10 000 € sur la table, je relance." },
+  { src: slide10.url, caption: "10 — Paris : 63 commandes en 72h." },
 ];
+
