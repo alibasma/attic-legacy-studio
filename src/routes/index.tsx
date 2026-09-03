@@ -83,7 +83,7 @@ function StoryCarousel() {
         </p>
       </div>
 
-      <div className="relative mt-10 flex h-[60vh] items-center justify-center overflow-visible perspective-[1200px] md:h-[70vh]">
+      <div className="relative mt-10 flex h-[60vh] items-center justify-center overflow-visible perspective-[1400px] md:h-[70vh]">
         {storySlides.map((slide, i) => {
           const offset = i - active;
           const isActive = offset === 0;
@@ -96,13 +96,13 @@ function StoryCarousel() {
               style={{
                 transform: `
                   translate(-50%, -50%)
-                  translateX(${offset * 45}%)
-                  translateZ(${isActive ? 0 : -120}px)
-                  rotateY(${offset * -22}deg)
-                  scale(${isActive ? 1 : 0.78})
+                  translateX(${offset * 38}%)
+                  translateZ(${isActive ? 0 : -80}px)
+                  rotateY(${offset * -16}deg)
+                  scale(${isActive ? 1 : 0.82})
                 `,
-                opacity: isActive ? 1 : 0.35,
-                filter: isActive ? "none" : "blur(5px)",
+                opacity: isActive ? 1 : 0.55,
+                filter: isActive ? "none" : "blur(3px)",
                 zIndex: isActive ? 30 : 20 - Math.abs(offset),
               }}
             >
