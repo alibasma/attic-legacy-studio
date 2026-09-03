@@ -119,7 +119,7 @@ function StoryCarousel() {
 
       <div className="mt-8 flex flex-col items-center gap-4">
         <figcaption className="text-center text-sm text-muted-foreground">
-          {storySlides[active].caption}
+          {storySlides[active]?.caption}
         </figcaption>
         <div className="flex items-center gap-4">
           <button
