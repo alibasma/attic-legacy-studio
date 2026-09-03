@@ -109,6 +109,8 @@ import slide07 from "@/assets/story-7.jpg.asset.json";
 import slide08 from "@/assets/story-8.webp.asset.json";
 import slide09 from "@/assets/story-9.jpg.asset.json";
 import slide10 from "@/assets/story-10.jpg.asset.json";
+import slide11 from "@/assets/story-11.jpg.asset.json";
+import slide12 from "@/assets/story-12.png.asset.json";
 
 export const storySlides = [
   { src: slide01.url, caption: "01 — Ingénieur, entrepreneur, styliste, vidéaste." },
@@ -121,5 +123,7 @@ export const storySlides = [
   { src: slide08.url, caption: "08 — Cologne : un an de maladie." },
   { src: slide09.url, caption: "09 — 10 000 € sur la table, je relance." },
   { src: slide10.url, caption: "10 — Paris : 63 commandes en 72h." },
+  { src: slide11.url, caption: "11 — Un an plus tard, Lyon." },
+  { src: slide12.url, caption: "12 — Refuser d'abandonner." },
 ];
 

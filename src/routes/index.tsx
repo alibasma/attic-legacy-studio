@@ -92,15 +92,15 @@ function StoryCarousel() {
 
       <div
         ref={trackRef}
-        className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 md:px-10"
+        className="no-scrollbar mt-10 flex snap-x snap-mandatory items-center gap-4 overflow-x-auto px-6 md:px-10"
       >
         {storySlides.map((slide, i) => (
-          <figure key={i} className="w-[85vw] shrink-0 snap-center md:w-[62vw]">
+          <figure key={i} className="shrink-0 snap-center">
             <img
               src={slide.src}
               alt={slide.caption}
               loading="lazy"
-              className="aspect-[4/5] w-full object-cover"
+              className="max-h-[55vh] w-auto max-w-[72vw] object-contain md:max-h-[60vh] md:max-w-[46vw]"
             />
             <figcaption className="mt-3 text-sm text-muted-foreground">{slide.caption}</figcaption>
           </figure>
