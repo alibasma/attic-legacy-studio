@@ -68,17 +68,10 @@ function Hero() {
 }
 
 function StoryCarousel() {
-  const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
 
   const go = (dir: number) => {
-    const next = Math.min(Math.max(active + dir, 0), storySlides.length - 1);
-    setActive(next);
-    const track = trackRef.current;
-    if (track) {
-      const child = track.children[next] as HTMLElement | undefined;
-      child?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-    }
+    setActive((prev) => Math.min(Math.max(prev + dir, 0), storySlides.length - 1));
   };
 
   return (
@@ -90,46 +83,63 @@ function StoryCarousel() {
         </p>
       </div>
 
-      <div
-        ref={trackRef}
-        className="no-scrollbar mt-10 flex snap-x snap-mandatory overflow-x-auto"
-      >
-        {storySlides.map((slide, i) => (
-          <figure
-            key={i}
-            className="flex w-full shrink-0 snap-center flex-col items-center px-6 md:px-10"
-          >
-            <img
-              src={slide.src}
-              alt={slide.caption}
-              loading="lazy"
-              className="max-h-[55vh] w-auto max-w-full object-contain md:max-h-[60vh]"
-            />
-            <figcaption className="mt-3 w-full max-w-xl text-sm text-muted-foreground">
-              {slide.caption}
-            </figcaption>
-          </figure>
-        ))}
+      <div className="relative mt-10 flex h-[60vh] items-center justify-center overflow-visible perspective-[1400px] md:h-[70vh]">
+        {storySlides.map((slide, i) => {
+          const offset = i - active;
+          const isActive = offset === 0;
+
+          return (
+            <figure
+              key={i}
+              onClick={() => setActive(i)}
+              className="absolute left-1/2 top-1/2 cursor-pointer transition-all duration-500 ease-out"
+              style={{
+                transform: `
+                  translate(-50%, -50%)
+                  translateX(${offset * 38}%)
+                  translateZ(${isActive ? 0 : -80}px)
+                  rotateY(${offset * -16}deg)
+                  scale(${isActive ? 1 : 0.82})
+                `,
+                opacity: isActive ? 1 : 0.55,
+                filter: isActive ? "none" : "blur(3px)",
+                zIndex: isActive ? 30 : 20 - Math.abs(offset),
+              }}
+            >
+              <img
+                src={slide.src}
+                alt={slide.caption}
+                loading="lazy"
+                className="max-h-[55vh] w-auto max-w-[72vw] object-contain md:max-h-[60vh] md:max-w-[46vw]"
+              />
+            </figure>
+          );
+        })}
       </div>
 
-      <div className="mt-8 flex items-center gap-6 px-6 md:px-10">
-        <span className="label">
-          {String(active + 1).padStart(2, "0")} / {String(storySlides.length).padStart(2, "0")}
-        </span>
-        <button
-          onClick={() => go(-1)}
-          aria-label="Précédent"
-          className="label border border-border px-4 py-3 hover:border-primary hover:text-primary"
-        >
-          ←
-        </button>
-        <button
-          onClick={() => go(1)}
-          aria-label="Suivant"
-          className="label border border-border px-4 py-3 hover:border-primary hover:text-primary"
-        >
-          →
-        </button>
+      <div className="mt-8 flex flex-col items-center gap-4">
+        <figcaption className="text-center text-sm text-muted-foreground">
+          {storySlides[active]?.caption}
+        </figcaption>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => go(-1)}
+            aria-label="Précédent"
+            className="label border border-border px-4 py-3 hover:border-primary hover:text-primary"
+          >
+            ←
+          </button>
+          <span className="label">
+            {String(active + 1).padStart(2, "0")} / {String(storySlides.length).padStart(2, "0")}
+          </span>
+          <button
+            onClick={() => go(1)}
+            aria-label="Suivant"
+            className="label border border-border px-4 py-3 hover:border-primary hover:text-primary"
+          >
+            →
+          </button>
+        </div>
       </div>
     </section>
   );
