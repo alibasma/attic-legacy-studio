@@ -100,7 +100,7 @@ function StoryCarousel() {
               src={slide.src}
               alt={slide.caption}
               loading="lazy"
-              className="aspect-[7/5] w-full object-cover"
+              className="aspect-[4/5] w-full object-cover"
             />
             <figcaption className="mt-3 text-sm text-muted-foreground">{slide.caption}</figcaption>
           </figure>
