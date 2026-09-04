@@ -52,7 +52,7 @@ export const collections: Collection[] = [
   {
     slug: "chapitre-01",
     index: "01",
-    name: "NOM DE LA COLLECTION",
+    name: "ETERNAL WILL",
     season: "CHAPITRE 01",
     cover: cover01,
     story:
@@ -69,7 +69,7 @@ export const collections: Collection[] = [
   {
     slug: "chapitre-02",
     index: "02",
-    name: "NOM DE LA COLLECTION",
+    name: "ICONIC HEARTBREAK",
     season: "CHAPITRE 02",
     cover: cover02,
     story:
@@ -86,7 +86,7 @@ export const collections: Collection[] = [
   {
     slug: "chapitre-03",
     index: "03",
-    name: "NOM DE LA COLLECTION",
+    name: "WORLD CUP 2026",
     season: "CHAPITRE 03",
     cover: cover03,
     story:
