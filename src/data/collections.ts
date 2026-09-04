@@ -19,11 +19,13 @@ import story01 from "@/assets/story-01.jpg";
 import story02 from "@/assets/story-02.jpg";
 import story03 from "@/assets/story-03.jpg";
 import atelier from "@/assets/process.jpg";
+import workshopAsset from "@/assets/workshop.jpg.asset.json";
+const workshop = workshopAsset.url;
 
 // Image plein écran du hero
 export const heroImage = hero;
 // Image de la section "D'une idée à une marque"
-export const processImage = atelier;
+export const processImage = workshop;
 
 export type Collection = {
   slug: string;
