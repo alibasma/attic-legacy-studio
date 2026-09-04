@@ -108,12 +108,12 @@ export const collections: Collection[] = [
     season: "CHAPITRE 03",
     cover: cover03,
     story:
-      "Raconte ici l'histoire de ce chapitre : d'où vient l'idée, ce qu'elle raconte, comment elle a été fabriquée.",
+      "Un drop pour la Coupe du monde. On voulait faire un truc artistique, où chaque pièce devient de l'art.",
     videoUrl: "#",
     details: [
-      "Molleton brossé",
-      "Broderies sur la poitrine",
-      "Capuche double épaisseur",
+      "2 manches longues",
+      "Détails broderie",
+      "Designé à la main",
       "Série limitée",
     ],
     gallery: [wc03, wc01, wc04, wc05, wc06, wc07, wc08, wc02],
