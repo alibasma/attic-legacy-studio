@@ -14,7 +14,7 @@ import heroAsset from "@/assets/hero.jpg.asset.json";
 const hero = heroAsset.url;
 import cover01Asset from "@/assets/eternal-will.jpg.asset.json";
 import cover02Asset from "@/assets/iconic-heartbreak.jpg.asset.json";
-import cover03Asset from "@/assets/world-cup-2026.jpg.asset.json";
+import cover03Asset from "@/assets/DSC06297.jpg.asset.json";
 const cover01 = cover01Asset.url;
 const cover02 = cover02Asset.url;
 const cover03 = cover03Asset.url;
@@ -24,6 +24,24 @@ import story03 from "@/assets/story-03.jpg";
 import atelier from "@/assets/process.jpg";
 import workshopAsset from "@/assets/workshop.jpg.asset.json";
 const workshop = workshopAsset.url;
+
+// ---- PHOTOS WORLD CUP 2026 ----
+import wc01Asset from "@/assets/DSC06072.jpg.asset.json";
+import wc02Asset from "@/assets/DSC06297.jpg.asset.json";
+import wc03Asset from "@/assets/IMG_0286.jpeg.asset.json";
+import wc04Asset from "@/assets/DSC06121.JPEG.asset.json";
+import wc05Asset from "@/assets/DSC06149.JPEG.asset.json";
+import wc06Asset from "@/assets/DSC06254.JPEG.asset.json";
+import wc07Asset from "@/assets/DSC06263.JPEG.asset.json";
+import wc08Asset from "@/assets/DSC06050.jpg.asset.json";
+const wc01 = wc01Asset.url;
+const wc02 = wc02Asset.url;
+const wc03 = wc03Asset.url;
+const wc04 = wc04Asset.url;
+const wc05 = wc05Asset.url;
+const wc06 = wc06Asset.url;
+const wc07 = wc07Asset.url;
+const wc08 = wc08Asset.url;
 
 // Image plein écran du hero
 export const heroImage = hero;
@@ -98,7 +116,7 @@ export const collections: Collection[] = [
       "Capuche double épaisseur",
       "Série limitée",
     ],
-    gallery: [cover03, atelier, story03, story01, story02, cover01, cover02, atelier],
+    gallery: [wc01, wc03, wc04, wc05, wc06, wc07, wc08, wc02],
   },
 ];
 
