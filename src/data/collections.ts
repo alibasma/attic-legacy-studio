@@ -10,7 +10,8 @@
 ------------------------------------------------------------------- */
 
 // ---- IMAGES (à remplacer par les tiennes) ----
-import hero from "@/assets/hero.jpg";
+import heroAsset from "@/assets/hero.jpg.asset.json";
+const hero = heroAsset.url;
 import cover01 from "@/assets/collection-01.jpg";
 import cover02 from "@/assets/collection-02.jpg";
 import cover03 from "@/assets/collection-03.jpg";
