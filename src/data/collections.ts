@@ -116,7 +116,7 @@ export const collections: Collection[] = [
       "Capuche double épaisseur",
       "Série limitée",
     ],
-    gallery: [cover03, atelier, story03, story01, story02, cover01, cover02, atelier],
+    gallery: [wc01, wc03, wc04, wc05, wc06, wc07, wc08, wc02],
   },
 ];
 
