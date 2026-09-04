@@ -12,9 +12,12 @@
 // ---- IMAGES (à remplacer par les tiennes) ----
 import heroAsset from "@/assets/hero.jpg.asset.json";
 const hero = heroAsset.url;
-import cover01 from "@/assets/collection-01.jpg";
-import cover02 from "@/assets/collection-02.jpg";
-import cover03 from "@/assets/collection-03.jpg";
+import cover01Asset from "@/assets/eternal-will.jpg.asset.json";
+import cover02Asset from "@/assets/iconic-heartbreak.jpg.asset.json";
+import cover03Asset from "@/assets/world-cup-2026.jpg.asset.json";
+const cover01 = cover01Asset.url;
+const cover02 = cover02Asset.url;
+const cover03 = cover03Asset.url;
 import story01 from "@/assets/story-01.jpg";
 import story02 from "@/assets/story-02.jpg";
 import story03 from "@/assets/story-03.jpg";
@@ -49,7 +52,7 @@ export const collections: Collection[] = [
   {
     slug: "chapitre-01",
     index: "01",
-    name: "NOM DE LA COLLECTION",
+    name: "ETERNAL WILL",
     season: "CHAPITRE 01",
     cover: cover01,
     story:
@@ -66,7 +69,7 @@ export const collections: Collection[] = [
   {
     slug: "chapitre-02",
     index: "02",
-    name: "NOM DE LA COLLECTION",
+    name: "ICONIC HEARTBREAK",
     season: "CHAPITRE 02",
     cover: cover02,
     story:
@@ -83,7 +86,7 @@ export const collections: Collection[] = [
   {
     slug: "chapitre-03",
     index: "03",
-    name: "NOM DE LA COLLECTION",
+    name: "WORLD CUP 2026",
     season: "CHAPITRE 03",
     cover: cover03,
     story:
