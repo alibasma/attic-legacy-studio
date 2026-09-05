@@ -77,7 +77,7 @@ function StoryCarousel() {
   return (
     <section id="histoire" className="border-t border-border py-20 md:py-28">
       <div className="px-6 md:px-10">
-        <h2 className="display text-[13vw] leading-[0.8] md:text-[7vw]">Avant Atticlegacy</h2>
+        <h2 className="display text-[13vw] leading-[0.8] md:text-[7vw]">L'origine d'Atticlegacy</h2>
         <p className="mt-4 text-sm text-muted-foreground md:text-base">
           Avant de découvrir la marque, découvre d'où elle vient.
         </p>
