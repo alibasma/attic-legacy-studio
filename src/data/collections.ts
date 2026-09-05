@@ -43,6 +43,24 @@ const wc06 = wc06Asset.url;
 const wc07 = wc07Asset.url;
 const wc08 = wc08Asset.url;
 
+// ---- PHOTOS ICONIC HEARTBREAK ----
+import ih01Asset from "@/assets/DSC02824.jpg.asset.json";
+import ih02Asset from "@/assets/DSC02936.jpg.asset.json";
+import ih03Asset from "@/assets/DSC03118.jpg.asset.json";
+import ih04Asset from "@/assets/DSC03240.jpg.asset.json";
+import ih05Asset from "@/assets/DSC02508.jpg.asset.json";
+import ih06Asset from "@/assets/DSC03060.jpg.asset.json";
+import ih07Asset from "@/assets/IMG_3974.jpg.asset.json";
+import ih08Asset from "@/assets/DSC02668.jpg.asset.json";
+const ih01 = ih01Asset.url;
+const ih02 = ih02Asset.url;
+const ih03 = ih03Asset.url;
+const ih04 = ih04Asset.url;
+const ih05 = ih05Asset.url;
+const ih06 = ih06Asset.url;
+const ih07 = ih07Asset.url;
+const ih08 = ih08Asset.url;
+
 // Image plein écran du hero
 export const heroImage = hero;
 // Image de la section "D'une idée à une marque"
