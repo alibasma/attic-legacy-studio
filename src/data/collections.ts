@@ -118,7 +118,7 @@ export const collections: Collection[] = [
       "Coupe oversize boxy",
       "Série limitée",
     ],
-    gallery: [cover01, story01, story02, story03, atelier, cover02, cover03, story01],
+    gallery: [ew01, ew02, ew03, ew04, ew05, ew06, ew07, ew08],
   },
   {
     slug: "chapitre-02",
