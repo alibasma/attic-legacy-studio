@@ -179,9 +179,10 @@ function FromIdeaToBrand() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-border pt-8">
-            {cities.map((c) => (
+            {cities.map((c, i) => (
               <span key={c} className="display text-xl md:text-3xl">
-                {c} <span className="text-primary">→</span>
+                {c}
+                {i < cities.length - 1 && <span className="ml-3 text-primary">→</span>}
               </span>
             ))}
           </div>
