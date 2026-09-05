@@ -110,12 +110,12 @@ export const collections: Collection[] = [
     season: "CHAPITRE 01",
     cover: cover01,
     story:
-      "Raconte ici l'histoire de ce chapitre : d'où vient l'idée, ce qu'elle raconte, comment elle a été fabriquée.",
+      "Eternal Will est né de cette volonté qui reste quand tout le reste disparaît. Continuer malgré les échecs, les doutes et les moments où abandonner semble plus simple. Parce que tout peut changer autour de toi, mais ta volonté, elle, peut être éternelle.",
     videoUrl: "#",
     details: [
-      "Coton lourd 420 g/m²",
-      "Sérigraphie artisanale",
-      "Coupe oversize boxy",
+      "3 t-shirts",
+      "Designé à la main",
+      "Coupe oversize",
       "Série limitée",
     ],
     gallery: [ew01, ew02, ew03, ew04, ew05, ew06, ew07, ew08],
