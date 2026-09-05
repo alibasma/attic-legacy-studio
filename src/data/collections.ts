@@ -117,7 +117,7 @@ export const collections: Collection[] = [
       "Silhouette relaxed",
       "Série limitée",
     ],
-    gallery: [cover02, story02, story03, atelier, story01, cover01, cover03, story02],
+    gallery: [ih01, ih02, ih03, ih04, ih05, ih06, ih07, ih08],
   },
   {
     slug: "chapitre-03",
