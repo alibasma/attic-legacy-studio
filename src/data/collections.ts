@@ -25,6 +25,24 @@ import atelier from "@/assets/process.jpg";
 import workshopAsset from "@/assets/workshop.jpg.asset.json";
 const workshop = workshopAsset.url;
 
+// ---- PHOTOS ETERNAL WILL ----
+import ew01Asset from "@/assets/IMG_0001.jpg.asset.json";
+import ew02Asset from "@/assets/IMG_0004.jpg.asset.json";
+import ew03Asset from "@/assets/IMG_0005.jpg.asset.json";
+import ew04Asset from "@/assets/IMG_9973.jpg.asset.json";
+import ew05Asset from "@/assets/IMG_9977.jpg.asset.json";
+import ew06Asset from "@/assets/IMG_9978.jpg.asset.json";
+import ew07Asset from "@/assets/IMG_9983.jpg.asset.json";
+import ew08Asset from "@/assets/IMG_9984.jpg.asset.json";
+const ew01 = ew01Asset.url;
+const ew02 = ew02Asset.url;
+const ew03 = ew03Asset.url;
+const ew04 = ew04Asset.url;
+const ew05 = ew05Asset.url;
+const ew06 = ew06Asset.url;
+const ew07 = ew07Asset.url;
+const ew08 = ew08Asset.url;
+
 // ---- PHOTOS WORLD CUP 2026 ----
 import wc01Asset from "@/assets/DSC06072.jpg.asset.json";
 import wc02Asset from "@/assets/DSC06297.jpg.asset.json";
@@ -100,7 +118,7 @@ export const collections: Collection[] = [
       "Coupe oversize boxy",
       "Série limitée",
     ],
-    gallery: [cover01, story01, story02, story03, atelier, cover02, cover03, story01],
+    gallery: [ew01, ew02, ew03, ew04, ew05, ew06, ew07, ew08],
   },
   {
     slug: "chapitre-02",
