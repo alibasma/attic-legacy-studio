@@ -109,12 +109,12 @@ export const collections: Collection[] = [
     season: "CHAPITRE 02",
     cover: cover02,
     story:
-      "Raconte ici l'histoire de ce chapitre : d'où vient l'idée, ce qu'elle raconte, comment elle a été fabriquée.",
+      "Iconic Heartbreak est né de ces ruptures qui finissent par nous construire autant qu'elles nous détruisent. Une collection qui transforme la douleur, le manque et les souvenirs en quelque chose qu'on peut porter. Parce que certaines histoires se terminent, mais ce qu'elles laissent derrière elles devient iconique.",
     videoUrl: "#",
     details: [
-      "Denim délavé",
-      "Boutons et rivets personnalisés",
-      "Silhouette relaxed",
+      "1 kway",
+      "2 t-shirts",
+      "1 collier",
       "Série limitée",
     ],
     gallery: [ih01, ih02, ih03, ih04, ih05, ih06, ih07, ih08],
