@@ -89,7 +89,7 @@ function CollectionPage() {
       </section>
 
       <div className="flex justify-between px-6 py-12 md:px-12">
-        <Link to="/" className="label text-muted-foreground hover:text-primary">
+        <Link to="/" resetScroll={false} className="label text-muted-foreground hover:text-primary">
           ← ATTICLEGACY
         </Link>
         <span className="label text-muted-foreground">{collection.index} / 03</span>
