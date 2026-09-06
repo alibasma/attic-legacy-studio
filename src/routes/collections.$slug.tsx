@@ -37,7 +37,8 @@ function CollectionPage() {
       return;
     }
 
-    window.location.assign("/");
+    const savedPosition = window.sessionStorage.getItem("atticlegacy-home-scroll");
+    window.location.assign(savedPosition ? `/?retour=${savedPosition}` : "/");
   };
 
   return (
