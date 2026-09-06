@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { collections, storySlides, heroImage, processImage } from "@/data/collections";
 
 export const Route = createFileRoute("/")({
@@ -23,6 +23,27 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useLayoutEffect(() => {
+    const savedPosition = window.sessionStorage.getItem("atticlegacy-home-scroll");
+    if (!savedPosition) return;
+
+    const scrollPosition = Number(savedPosition);
+    if (!Number.isFinite(scrollPosition)) return;
+
+    const restorePosition = () => window.scrollTo({ top: scrollPosition, behavior: "instant" });
+    restorePosition();
+    const frame = window.requestAnimationFrame(restorePosition);
+    const timer = window.setTimeout(() => {
+      restorePosition();
+      window.sessionStorage.removeItem("atticlegacy-home-scroll");
+    }, 100);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <main>
       <Hero />
@@ -214,6 +235,9 @@ function Collections() {
             key={c.slug}
             to="/collections/$slug"
             params={{ slug: c.slug }}
+            onClick={() => {
+              window.sessionStorage.setItem("atticlegacy-home-scroll", String(window.scrollY));
+            }}
             className="group relative block overflow-hidden"
           >
             <img
