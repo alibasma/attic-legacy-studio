@@ -128,7 +128,7 @@ export const collections: Collection[] = [
     cover: cover02,
     story:
       "Iconic Heartbreak est né de ces ruptures qui finissent par nous construire autant qu'elles nous détruisent. Une collection qui transforme la douleur, le manque et les souvenirs en quelque chose qu'on peut porter. Parce que certaines histoires se terminent, mais ce qu'elles laissent derrière elles devient iconique.",
-    videoUrl: "#",
+    videoUrl: "https://www.instagram.com/reel/DOQbVocDKJc/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     details: [
       "1 kway",
       "2 t-shirts",
@@ -145,7 +145,7 @@ export const collections: Collection[] = [
     cover: cover03,
     story:
       "Un drop pour la Coupe du monde. On voulait faire un truc artistique, où chaque pièce devient de l'art.",
-    videoUrl: "#",
+    videoUrl: "https://www.instagram.com/reel/DaVpGEssx_D/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     details: [
       "2 manches longues",
       "Détails broderie",
