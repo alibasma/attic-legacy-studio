@@ -63,14 +63,16 @@ function CollectionPage() {
               </li>
             ))}
           </ul>
-          <a
-            href={collection.videoUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="label mt-8 inline-block bg-primary px-6 py-4 text-primary-foreground transition-opacity hover:opacity-80"
-          >
-            Voir la vidéo du drop →
-          </a>
+          {collection.videoUrl && collection.videoUrl !== "#" && (
+            <a
+              href={collection.videoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="label mt-8 inline-block bg-primary px-6 py-4 text-primary-foreground transition-opacity hover:opacity-80"
+            >
+              Voir la vidéo du drop →
+            </a>
+          )}
         </div>
       </section>
 
