@@ -40,7 +40,7 @@ function CollectionPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-background/60" />
         <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-12">
-          <Link to="/" className="label text-muted-foreground hover:text-primary">
+          <Link to="/" resetScroll={false} className="label text-muted-foreground hover:text-primary">
             ← Retour
           </Link>
           <div>
