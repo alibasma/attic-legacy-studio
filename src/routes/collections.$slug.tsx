@@ -40,7 +40,7 @@ function CollectionPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-background/60" />
         <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-12">
-          <Link to="/" className="label text-muted-foreground hover:text-primary">
+          <Link to="/" resetScroll={false} className="label text-muted-foreground hover:text-primary">
             ← Retour
           </Link>
           <div>
@@ -89,7 +89,7 @@ function CollectionPage() {
       </section>
 
       <div className="flex justify-between px-6 py-12 md:px-12">
-        <Link to="/" className="label text-muted-foreground hover:text-primary">
+        <Link to="/" resetScroll={false} className="label text-muted-foreground hover:text-primary">
           ← ATTICLEGACY
         </Link>
         <span className="label text-muted-foreground">{collection.index} / 03</span>
