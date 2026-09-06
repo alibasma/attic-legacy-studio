@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 import { collections } from "@/data/collections";
 
 export const Route = createFileRoute("/collections/$slug")({
@@ -30,6 +31,15 @@ export const Route = createFileRoute("/collections/$slug")({
 function CollectionPage() {
   const { collection } = Route.useLoaderData();
 
+  const returnToPreviousPosition = () => {
+    if (window.history.length > 1) {
+      window.history.back();
+      return;
+    }
+
+    window.location.assign("/");
+  };
+
   return (
     <main className="min-h-screen">
       <div className="relative h-[70vh] w-full overflow-hidden">
@@ -40,9 +50,14 @@ function CollectionPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-background/60" />
         <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-12">
-          <Link to="/" resetScroll={false} className="label text-muted-foreground hover:text-primary">
+          <Button
+            type="button"
+            variant="ghost"
+            onClick={returnToPreviousPosition}
+            className="label h-auto w-fit p-0 text-muted-foreground hover:bg-transparent hover:text-primary"
+          >
             ← Retour
-          </Link>
+          </Button>
           <div>
             <p className="label text-primary">{collection.season}</p>
             <h1 className="display mt-3 text-[16vw] leading-[0.8] md:text-[9vw]">
@@ -89,9 +104,14 @@ function CollectionPage() {
       </section>
 
       <div className="flex justify-between px-6 py-12 md:px-12">
-        <Link to="/" resetScroll={false} className="label text-muted-foreground hover:text-primary">
+        <Button
+          type="button"
+          variant="ghost"
+          onClick={returnToPreviousPosition}
+          className="label h-auto p-0 text-muted-foreground hover:bg-transparent hover:text-primary"
+        >
           ← ATTICLEGACY
-        </Link>
+        </Button>
         <span className="label text-muted-foreground">{collection.index} / 03</span>
       </div>
     </main>
