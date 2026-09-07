@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { collections, storySlides, heroImage, processImage } from "@/data/collections";
 
 export const Route = createFileRoute("/")({
@@ -22,26 +22,60 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const SCROLL_KEY = "atticlegacy-home-scroll";
+const SLUG_KEY = "atticlegacy-home-slug";
+
 function Index() {
+  // Restaure la position au retour, sans flash visuel.
   useLayoutEffect(() => {
-    const savedPosition = window.sessionStorage.getItem("atticlegacy-home-scroll");
+    const savedPosition = window.sessionStorage.getItem(SCROLL_KEY);
     if (!savedPosition) return;
 
     const scrollPosition = Number(savedPosition);
     if (!Number.isFinite(scrollPosition)) return;
 
+    document.documentElement.style.visibility = "hidden";
+
     const restorePosition = () => window.scrollTo({ top: scrollPosition, behavior: "instant" });
     restorePosition();
-    const frame = window.requestAnimationFrame(restorePosition);
-    const timer = window.setTimeout(() => {
+    const frame = window.requestAnimationFrame(() => {
       restorePosition();
-      window.sessionStorage.removeItem("atticlegacy-home-scroll");
-    }, 100);
+      window.requestAnimationFrame(restorePosition);
+    });
+    // Dernière restauration une fois les images chargées : on s'ancre sur la cover cliquée.
+    const timer = window.setTimeout(() => {
+      const slug = window.sessionStorage.getItem(SLUG_KEY);
+      const target = slug ? document.getElementById(`collection-${slug}`) : null;
+      if (target) {
+        target.scrollIntoView({ block: "center", behavior: "instant" });
+      } else {
+        restorePosition();
+      }
+      document.documentElement.style.visibility = "";
+      window.sessionStorage.removeItem(SLUG_KEY);
+    }, 250);
 
     return () => {
       window.cancelAnimationFrame(frame);
       window.clearTimeout(timer);
+      document.documentElement.style.visibility = "";
     };
+  }, []);
+
+  // Mémorise la position en continu pour pouvoir y revenir depuis un chapitre.
+  useEffect(() => {
+    let ticking = false;
+    const save = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        window.sessionStorage.setItem(SCROLL_KEY, String(window.scrollY));
+        ticking = false;
+      });
+    };
+    save();
+    window.addEventListener("scroll", save, { passive: true });
+    return () => window.removeEventListener("scroll", save);
   }, []);
 
   return (
@@ -233,10 +267,11 @@ function Collections() {
         {collections.map((c) => (
           <Link
             key={c.slug}
+            id={`collection-${c.slug}`}
             to="/collections/$slug"
             params={{ slug: c.slug }}
             onClick={() => {
-              window.sessionStorage.setItem("atticlegacy-home-scroll", String(window.scrollY));
+              window.sessionStorage.setItem(SLUG_KEY, c.slug);
             }}
             className="group relative block overflow-hidden"
           >
