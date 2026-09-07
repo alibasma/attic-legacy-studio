@@ -267,8 +267,12 @@ function Collections() {
         {collections.map((c) => (
           <Link
             key={c.slug}
+            id={`collection-${c.slug}`}
             to="/collections/$slug"
             params={{ slug: c.slug }}
+            onClick={() => {
+              window.sessionStorage.setItem(SLUG_KEY, c.slug);
+            }}
             className="group relative block overflow-hidden"
           >
             <img
