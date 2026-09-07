@@ -22,15 +22,17 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const SCROLL_KEY = "atticlegacy-home-scroll";
+
 function Index() {
+  // Restaure la position au retour, sans flash visuel.
   useLayoutEffect(() => {
-    const savedPosition = window.sessionStorage.getItem("atticlegacy-home-scroll");
+    const savedPosition = window.sessionStorage.getItem(SCROLL_KEY);
     if (!savedPosition) return;
 
     const scrollPosition = Number(savedPosition);
     if (!Number.isFinite(scrollPosition)) return;
 
-    // Masque la page le temps de restaurer la position, pour éviter tout flash visuel.
     document.documentElement.style.visibility = "hidden";
 
     const restorePosition = () => window.scrollTo({ top: scrollPosition, behavior: "instant" });
@@ -40,7 +42,6 @@ function Index() {
       window.requestAnimationFrame(() => {
         restorePosition();
         document.documentElement.style.visibility = "";
-        window.sessionStorage.removeItem("atticlegacy-home-scroll");
       });
     });
 
@@ -48,6 +49,22 @@ function Index() {
       window.cancelAnimationFrame(frame);
       document.documentElement.style.visibility = "";
     };
+  }, []);
+
+  // Mémorise la position en continu pour pouvoir y revenir depuis un chapitre.
+  useEffect(() => {
+    let ticking = false;
+    const save = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        window.sessionStorage.setItem(SCROLL_KEY, String(window.scrollY));
+        ticking = false;
+      });
+    };
+    save();
+    window.addEventListener("scroll", save, { passive: true });
+    return () => window.removeEventListener("scroll", save);
   }, []);
 
   return (
@@ -241,9 +258,6 @@ function Collections() {
             key={c.slug}
             to="/collections/$slug"
             params={{ slug: c.slug }}
-            onClick={() => {
-              window.sessionStorage.setItem("atticlegacy-home-scroll", String(window.scrollY));
-            }}
             className="group relative block overflow-hidden"
           >
             <img
