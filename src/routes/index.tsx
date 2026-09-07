@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { collections, storySlides, heroImage, processImage } from "@/data/collections";
 
 export const Route = createFileRoute("/")({
