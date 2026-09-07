@@ -30,17 +30,23 @@ function Index() {
     const scrollPosition = Number(savedPosition);
     if (!Number.isFinite(scrollPosition)) return;
 
+    // Masque la page le temps de restaurer la position, pour éviter tout flash visuel.
+    document.documentElement.style.visibility = "hidden";
+
     const restorePosition = () => window.scrollTo({ top: scrollPosition, behavior: "instant" });
     restorePosition();
-    const frame = window.requestAnimationFrame(restorePosition);
-    const timer = window.setTimeout(() => {
+    const frame = window.requestAnimationFrame(() => {
       restorePosition();
-      window.sessionStorage.removeItem("atticlegacy-home-scroll");
-    }, 100);
+      window.requestAnimationFrame(() => {
+        restorePosition();
+        document.documentElement.style.visibility = "";
+        window.sessionStorage.removeItem("atticlegacy-home-scroll");
+      });
+    });
 
     return () => {
       window.cancelAnimationFrame(frame);
-      window.clearTimeout(timer);
+      document.documentElement.style.visibility = "";
     };
   }, []);
 
