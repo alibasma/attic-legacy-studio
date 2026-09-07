@@ -39,14 +39,17 @@ function Index() {
     restorePosition();
     const frame = window.requestAnimationFrame(() => {
       restorePosition();
-      window.requestAnimationFrame(() => {
-        restorePosition();
-        document.documentElement.style.visibility = "";
-      });
+      window.requestAnimationFrame(restorePosition);
     });
+    // Dernière restauration une fois les images chargées (la hauteur de page peut bouger).
+    const timer = window.setTimeout(() => {
+      restorePosition();
+      document.documentElement.style.visibility = "";
+    }, 250);
 
     return () => {
       window.cancelAnimationFrame(frame);
+      window.clearTimeout(timer);
       document.documentElement.style.visibility = "";
     };
   }, []);
