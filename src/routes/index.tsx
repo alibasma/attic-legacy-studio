@@ -23,6 +23,7 @@ export const Route = createFileRoute("/")({
 });
 
 const SCROLL_KEY = "atticlegacy-home-scroll";
+const SLUG_KEY = "atticlegacy-home-slug";
 
 function Index() {
   // Restaure la position au retour, sans flash visuel.
@@ -41,10 +42,17 @@ function Index() {
       restorePosition();
       window.requestAnimationFrame(restorePosition);
     });
-    // Dernière restauration une fois les images chargées (la hauteur de page peut bouger).
+    // Dernière restauration une fois les images chargées : on s'ancre sur la cover cliquée.
     const timer = window.setTimeout(() => {
-      restorePosition();
+      const slug = window.sessionStorage.getItem(SLUG_KEY);
+      const target = slug ? document.getElementById(`collection-${slug}`) : null;
+      if (target) {
+        target.scrollIntoView({ block: "center", behavior: "instant" });
+      } else {
+        restorePosition();
+      }
       document.documentElement.style.visibility = "";
+      window.sessionStorage.removeItem(SLUG_KEY);
     }, 250);
 
     return () => {
