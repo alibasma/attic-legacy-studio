@@ -34,10 +34,10 @@ import ew08 from "@/assets/IMG_9984.jpg";
 import wc01 from "@/assets/DSC06072.jpg";
 import wc02 from "@/assets/DSC06297.jpg";
 import wc03 from "@/assets/IMG_0286.jpeg";
-import wc04 from "@/assets/DSC06121.JPEG";
-import wc05 from "@/assets/DSC06149.JPEG";
-import wc06 from "@/assets/DSC06254.JPEG";
-import wc07 from "@/assets/DSC06263.JPEG";
+import wc04 from "@/assets/DSC06121.jpg";
+import wc05 from "@/assets/DSC06149.jpg";
+import wc06 from "@/assets/DSC06254.jpg";
+import wc07 from "@/assets/DSC06263.jpg";
 import wc08 from "@/assets/DSC06050.jpg";
 
 // ---- PHOTOS ICONIC HEARTBREAK ----
