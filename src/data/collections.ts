@@ -10,74 +10,45 @@
 ------------------------------------------------------------------- */
 
 // ---- IMAGES (à remplacer par les tiennes) ----
-import heroAsset from "@/assets/hero.jpg.asset.json";
-const hero = heroAsset.url;
-import cover01Asset from "@/assets/eternal-will.jpg.asset.json";
-import cover02Asset from "@/assets/iconic-heartbreak.jpg.asset.json";
-import cover03Asset from "@/assets/DSC06297.jpg.asset.json";
-const cover01 = cover01Asset.url;
-const cover02 = cover02Asset.url;
-const cover03 = cover03Asset.url;
+import hero from "@/assets/hero.jpg";
+import cover01 from "@/assets/eternal-will.jpg";
+import cover02 from "@/assets/iconic-heartbreak.jpg";
+import cover03 from "@/assets/DSC06297.jpg";
 import story01 from "@/assets/story-01.jpg";
 import story02 from "@/assets/story-02.jpg";
 import story03 from "@/assets/story-03.jpg";
 import atelier from "@/assets/process.jpg";
-import workshopAsset from "@/assets/workshop.jpg.asset.json";
-const workshop = workshopAsset.url;
+import workshop from "@/assets/workshop.jpg";
 
 // ---- PHOTOS ETERNAL WILL ----
-import ew01Asset from "@/assets/IMG_0001.jpg.asset.json";
-import ew02Asset from "@/assets/IMG_0004.jpg.asset.json";
-import ew03Asset from "@/assets/IMG_0005.jpg.asset.json";
-import ew04Asset from "@/assets/IMG_9973.jpg.asset.json";
-import ew05Asset from "@/assets/IMG_9977.jpg.asset.json";
-import ew06Asset from "@/assets/IMG_9978.jpg.asset.json";
-import ew07Asset from "@/assets/IMG_9983.jpg.asset.json";
-import ew08Asset from "@/assets/IMG_9984.jpg.asset.json";
-const ew01 = ew01Asset.url;
-const ew02 = ew02Asset.url;
-const ew03 = ew03Asset.url;
-const ew04 = ew04Asset.url;
-const ew05 = ew05Asset.url;
-const ew06 = ew06Asset.url;
-const ew07 = ew07Asset.url;
-const ew08 = ew08Asset.url;
+import ew01 from "@/assets/IMG_0001.jpg";
+import ew02 from "@/assets/IMG_0004.jpg";
+import ew03 from "@/assets/IMG_0005.jpg";
+import ew04 from "@/assets/IMG_9973.jpg";
+import ew05 from "@/assets/IMG_9977.jpg";
+import ew06 from "@/assets/IMG_9978.jpg";
+import ew07 from "@/assets/IMG_9983.jpg";
+import ew08 from "@/assets/IMG_9984.jpg";
 
 // ---- PHOTOS WORLD CUP 2026 ----
-import wc01Asset from "@/assets/DSC06072.jpg.asset.json";
-import wc02Asset from "@/assets/DSC06297.jpg.asset.json";
-import wc03Asset from "@/assets/IMG_0286.jpeg.asset.json";
-import wc04Asset from "@/assets/DSC06121.JPEG.asset.json";
-import wc05Asset from "@/assets/DSC06149.JPEG.asset.json";
-import wc06Asset from "@/assets/DSC06254.JPEG.asset.json";
-import wc07Asset from "@/assets/DSC06263.JPEG.asset.json";
-import wc08Asset from "@/assets/DSC06050.jpg.asset.json";
-const wc01 = wc01Asset.url;
-const wc02 = wc02Asset.url;
-const wc03 = wc03Asset.url;
-const wc04 = wc04Asset.url;
-const wc05 = wc05Asset.url;
-const wc06 = wc06Asset.url;
-const wc07 = wc07Asset.url;
-const wc08 = wc08Asset.url;
+import wc01 from "@/assets/DSC06072.jpg";
+import wc02 from "@/assets/DSC06297.jpg";
+import wc03 from "@/assets/IMG_0286.jpeg";
+import wc04 from "@/assets/DSC06121.JPEG";
+import wc05 from "@/assets/DSC06149.JPEG";
+import wc06 from "@/assets/DSC06254.JPEG";
+import wc07 from "@/assets/DSC06263.JPEG";
+import wc08 from "@/assets/DSC06050.jpg";
 
 // ---- PHOTOS ICONIC HEARTBREAK ----
-import ih01Asset from "@/assets/DSC02824.jpg.asset.json";
-import ih02Asset from "@/assets/DSC02936.jpg.asset.json";
-import ih03Asset from "@/assets/DSC03118.jpg.asset.json";
-import ih04Asset from "@/assets/DSC03240.jpg.asset.json";
-import ih05Asset from "@/assets/DSC02508.jpg.asset.json";
-import ih06Asset from "@/assets/DSC03060.jpg.asset.json";
-import ih07Asset from "@/assets/IMG_3974.jpg.asset.json";
-import ih08Asset from "@/assets/DSC02668.jpg.asset.json";
-const ih01 = ih01Asset.url;
-const ih02 = ih02Asset.url;
-const ih03 = ih03Asset.url;
-const ih04 = ih04Asset.url;
-const ih05 = ih05Asset.url;
-const ih06 = ih06Asset.url;
-const ih07 = ih07Asset.url;
-const ih08 = ih08Asset.url;
+import ih01 from "@/assets/DSC02824.jpg";
+import ih02 from "@/assets/DSC02936.jpg";
+import ih03 from "@/assets/DSC03118.jpg";
+import ih04 from "@/assets/DSC03240.jpg";
+import ih05 from "@/assets/DSC02508.jpg";
+import ih06 from "@/assets/DSC03060.jpg";
+import ih07 from "@/assets/IMG_3974.jpg";
+import ih08 from "@/assets/DSC02668.jpg";
 
 // Image plein écran du hero
 export const heroImage = hero;
@@ -159,31 +130,31 @@ export const collections: Collection[] = [
 /* ---- CARROUSEL "AVANT ATTICLEGACY" ----
    Ce sont tes 10 slides (le texte est déjà sur les images).
    Pour en changer une : remplace le fichier importé en haut de la liste.     */
-import slide01 from "@/assets/story-1.webp.asset.json";
-import slide02 from "@/assets/story-2.jpg.asset.json";
-import slide03 from "@/assets/story-3.webp.asset.json";
-import slide04 from "@/assets/story-4.webp.asset.json";
-import slide05 from "@/assets/story-5.webp.asset.json";
-import slide06 from "@/assets/story-6.webp.asset.json";
-import slide07 from "@/assets/story-7.jpg.asset.json";
-import slide08 from "@/assets/story-8.webp.asset.json";
-import slide09 from "@/assets/story-9.jpg.asset.json";
-import slide10 from "@/assets/story-10.jpg.asset.json";
-import slide11 from "@/assets/story-11.jpg.asset.json";
-import slide12 from "@/assets/story-12.png.asset.json";
+import slide01 from "@/assets/story-1.webp";
+import slide02 from "@/assets/story-2.jpg";
+import slide03 from "@/assets/story-3.webp";
+import slide04 from "@/assets/story-4.webp";
+import slide05 from "@/assets/story-5.webp";
+import slide06 from "@/assets/story-6.webp";
+import slide07 from "@/assets/story-7.jpg";
+import slide08 from "@/assets/story-8.webp";
+import slide09 from "@/assets/story-9.jpg";
+import slide10 from "@/assets/story-10.jpg";
+import slide11 from "@/assets/story-11.jpg";
+import slide12 from "@/assets/story-12.png";
 
 export const storySlides = [
-  { src: slide01.url, caption: "01 — Ingénieur, entrepreneur, styliste, vidéaste." },
-  { src: slide02.url, caption: "02 — Après le bac : partir de zéro." },
-  { src: slide03.url, caption: "03 — École d'ingénieur à Dakar, la tête ailleurs." },
-  { src: slide04.url, caption: "04 — 200 € et un grenier." },
-  { src: slide05.url, caption: "05 — Les 40 premiers t-shirts." },
-  { src: slide06.url, caption: "06 — 1 000 € perdus. J'arrête." },
-  { src: slide07.url, caption: "07 — Dakar → Nice → Cologne." },
-  { src: slide08.url, caption: "08 — Cologne : un an de maladie." },
-  { src: slide09.url, caption: "09 — 10 000 € sur la table, je relance." },
-  { src: slide10.url, caption: "10 — Paris : 63 commandes en 72h." },
-  { src: slide11.url, caption: "11 — Un an plus tard, Lyon." },
-  { src: slide12.url, caption: "12 — Refuser d'abandonner." },
+  { src: slide01, caption: "01 — Ingénieur, entrepreneur, styliste, vidéaste." },
+  { src: slide02, caption: "02 — Après le bac : partir de zéro." },
+  { src: slide03, caption: "03 — École d'ingénieur à Dakar, la tête ailleurs." },
+  { src: slide04, caption: "04 — 200 € et un grenier." },
+  { src: slide05, caption: "05 — Les 40 premiers t-shirts." },
+  { src: slide06, caption: "06 — 1 000 € perdus. J'arrête." },
+  { src: slide07, caption: "07 — Dakar → Nice → Cologne." },
+  { src: slide08, caption: "08 — Cologne : un an de maladie." },
+  { src: slide09, caption: "09 — 10 000 € sur la table, je relance." },
+  { src: slide10, caption: "10 — Paris : 63 commandes en 72h." },
+  { src: slide11, caption: "11 — Un an plus tard, Lyon." },
+  { src: slide12, caption: "12 — Refuser d'abandonner." },
 ];
 
