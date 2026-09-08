@@ -81,7 +81,7 @@ export const collections: Collection[] = [
     season: "CHAPITRE 01",
     cover: cover01,
     story:
-      "Eternal Will est né de cette volonté qui reste quand tout le reste disparaît. Continuer malgré les échecs, les doutes et les moments où abandonner semble plus simple. Parce que tout peut [...]
+      `Eternal Will est né de cette volonté qui reste quand tout le reste disparaît. Continuer malgré les échecs, les doutes et les moments où abandonner semble plus simple. Parce que tout persiste, tant qu'on le choisit.`,
     videoUrl: "#",
     details: [
       "3 t-shirts",
@@ -98,7 +98,7 @@ export const collections: Collection[] = [
     season: "CHAPITRE 02",
     cover: cover02,
     story:
-      "Iconic Heartbreak est né de ces ruptures qui finissent par nous construire autant qu'elles nous détruisent. Une collection qui transforme la douleur, le manque et les souvenirs en quelque cho[...]
+      `Iconic Heartbreak est né de ces ruptures qui finissent par nous construire autant qu'elles nous détruisent. Une collection qui transforme la douleur, le manque et les souvenirs en quelque chose d'intemporel.`,
     videoUrl: "https://www.instagram.com/reel/DOQbVocDKJc/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     details: [
       "1 kway",
